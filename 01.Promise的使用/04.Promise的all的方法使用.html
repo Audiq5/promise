@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Promise.all([
+      //   new Promise((reslove,reject) => {
+      //     $ajax({
+      //       url:'url1',
+      //       success:function (data){
+      //         reslove(data)
+      //       }
+      //     })
+      //   }),
+      //   new Promise((reslove,reject) => {
+      //     $ajax({
+      //       url:'url2',
+      //       success:function (data){
+      //         reslove(data)
+      //       }
+      //     })
+      //   }),
+
+      // Promise.all([
+      //   new Promise((reslove,reject) => {
+      //     setTimeout(() => {
+      //       reslove('result1')
+      //     },1000)
+      //     }),
+      //   new Promise((reslove,reject) => {
+      //         setTimeout(() => {
+      //         reslove('result2')
+      //     },2000)
+      //     })
+      //   ]).then(results => {
+      //   console.log(results);
+      // })
+
+      Promise.all([
+        new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("result1")
+          }, 1000)
+        }),
+        new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("result2")
+          }, 1000)
+        }),
+      ]).then((result) => {
+        console.log(result)
+      })
+    </script>
+  </body>
+</html>
